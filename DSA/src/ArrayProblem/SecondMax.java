@@ -1,3 +1,5 @@
+package ArrayProblem;
+
 public class SecondMax {
     static void FindSecondMax(int[] SecondMaxArray){
         int max = Integer.MIN_VALUE;

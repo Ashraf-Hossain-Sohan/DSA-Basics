@@ -1,3 +1,5 @@
+package ArrayProblem;
+
 public class MissingNumber {
     static void MissingValue(int[] FindTheNumber){
         int n = FindTheNumber.length + 1;

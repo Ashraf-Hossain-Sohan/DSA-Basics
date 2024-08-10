@@ -1,3 +1,5 @@
+package ArrayProblem;
+
 public class ResizeArray {
     static int[] ResizeTheArray(int[] GivenArray , int Capacity){
         int[] temp = new int[Capacity];

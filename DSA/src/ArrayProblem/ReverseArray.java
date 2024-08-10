@@ -1,3 +1,5 @@
+package ArrayProblem;
+
 public class ReverseArray {
     static void SetArrayInReverse(int newArray[] , int start , int end){
         while(start < end){

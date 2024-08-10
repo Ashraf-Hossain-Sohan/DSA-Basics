@@ -1,3 +1,5 @@
+package ArrayProblem;
+
 public class MoveZero {
     static void MoveThezero(int[] arr){
         int j = 0;

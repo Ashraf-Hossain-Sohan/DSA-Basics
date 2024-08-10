@@ -1,3 +1,5 @@
+package ArrayProblem;
+
 public class MinimumValue {
     static void findMinValur(int[] minArray){
         int min = minArray[0];
