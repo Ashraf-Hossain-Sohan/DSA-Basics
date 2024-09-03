@@ -1,7 +1,5 @@
 package SinglyLinkedList;
 
-import java.util.List;
-
 public class InsertBeginning {
 
     private ListNode head;
