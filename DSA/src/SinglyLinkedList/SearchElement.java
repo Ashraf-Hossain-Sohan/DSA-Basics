@@ -1,6 +1,6 @@
 package SinglyLinkedList;
 
-public class DeletePlace {
+public class SearchElement {
 
     private static ListNode head;
 
@@ -21,36 +21,39 @@ public class DeletePlace {
         }
         System.out.print("Null");
     }
-    public void delete(int position){
-        if(position == 1){
-            head = head.next;
-        }else{
-            ListNode previous = head;
-            int count = 1;
-            while(count < position -1){
-                previous = previous.next;
-                count++;
-            }
-            ListNode current = previous.next;
-            previous.next = current.next;
+    public boolean find(ListNode head,int searchKey){
+        if(head == null){
+            return false;
         }
+        ListNode current = head;
+        while(current != null){
+            if (current.data == searchKey){
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
     }
     public static void main (String[] args){
-        DeletePlace sll = new DeletePlace();
+        SearchElement sll = new SearchElement();
 
-        sll.head = new ListNode(10);
+        head = new ListNode(10);
         ListNode second = new ListNode(1);
         ListNode third = new ListNode(8);
         ListNode forth = new ListNode(11);
+        ListNode fifth = new ListNode(20);
 
-        sll.head.next = second;
+        head.next = second;
         second.next = third;
         third.next = forth;
+        forth.next = fifth;
 
         sll.display();
         System.out.println(" ");
-
-        sll.delete(3);
-        sll.display();
+        if (sll.find(head,20)){
+            System.out.println("item found...");
+        }else {
+            System.out.println("item is not in the list");
+        }
     }
 }
