@@ -1,6 +1,6 @@
 package SinglyLinkedList;
 
-public class RemoveDuplicate {
+public class RemoveKey {
 
     private static ListNode head;
 
@@ -23,7 +23,7 @@ public class RemoveDuplicate {
     }
     public void insertLast(int value){
         ListNode newNode = new ListNode(value);
-        if (head == null){
+        if(head == null){
             head = newNode;
             return;
         }
@@ -33,35 +33,41 @@ public class RemoveDuplicate {
         }
         current.next = newNode;
     }
-    public void removeDuplicates(){
-        if(head == null){
+    public void deleteKey(int key){
+        ListNode current = head;
+        ListNode temp = null;
+
+        if (current != null && current.data == key){
+            head = current.next;
             return;
         }
-        ListNode current = head;
-        while(current != null && current.next != null){
-            if (current.data == current.next.data){
-                current.next = current.next.next;
-            }else{
-                current = current.next;
-            }
+        while(current != null && current.data != key){
+            temp = current;
+            current = current.next;
         }
+        if(current == null){
+            return;
+        }
+        temp.next = current.next;
     }
-    public static void main (String[] args){
-        RemoveDuplicate sll = new RemoveDuplicate();
+    public static void main(String[] args){
+        RemoveKey sll = new RemoveKey();
 
-        //sorted singly linked list
         sll.insertLast(1);
         sll.insertLast(1);
-        sll.insertLast(8);
-        sll.insertLast(11);
-        sll.insertLast(11);
-        sll.insertLast(12);
+        sll.insertLast(10);
+        sll.insertLast(10);
+        sll.insertLast(16);
+        sll.insertLast(17);
+        sll.insertLast(19);
 
         sll.display(head);
         System.out.println(" ");
 
-        sll.removeDuplicates();
+        sll.deleteKey(17);
         sll.display(head);
+
 
     }
 }
+
