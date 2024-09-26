@@ -27,7 +27,7 @@ public class DeletePlace {
         }else{
             ListNode previous = head;
             int count = 1;
-            while(count < position -1){
+            while(count < position - 1){
                 previous = previous.next;
                 count++;
             }

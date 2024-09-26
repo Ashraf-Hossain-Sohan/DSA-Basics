@@ -52,6 +52,10 @@ public class RemoveDuplicate {
         //sorted singly linked list
         sll.insertLast(1);
         sll.insertLast(1);
+        sll.insertLast(1);
+        sll.insertLast(1);
+        sll.insertLast(8);
+        sll.insertLast(8);
         sll.insertLast(8);
         sll.insertLast(11);
         sll.insertLast(11);

@@ -11,10 +11,10 @@ public class ReverseArray {
         }
     }
     public static void main (String[] args){
-        int[] newArray = {2,5,8,15,36,40};
+        int[] newArray = {2,5,8,15,36,40,52,96,31,87,236,25,336};
 
-        SetArrayInReverse(newArray , 0 , newArray.length -1);
-        for (int i = 0 ; i < 6 ;i++){
+        SetArrayInReverse(newArray , 0 , newArray.length - 1);
+        for (int i = 0 ; i < newArray.length ;i++){
             System.out.print(newArray[i] + " ");
         }
     }

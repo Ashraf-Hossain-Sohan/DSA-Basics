@@ -56,6 +56,8 @@ public class InsertPlace {
 
         sll.insert(4,11);
         sll.insert(5,20);
+        sll.insert(1,90);
+        sll.insert(5,67);
         sll.display();
     }
 }

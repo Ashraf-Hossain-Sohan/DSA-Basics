@@ -12,7 +12,7 @@ public class ResizeArray {
         int[] needToResize = {10,20,30,40};
         System.out.println(needToResize.length);
 
-        needToResize = ResizeTheArray(needToResize,10);
+        needToResize = ResizeTheArray(needToResize,16);
 
         System.out.println(needToResize.length);
     }

@@ -48,6 +48,8 @@ public class InsertEnd {
         sll.display();
 
         sll.insertLast(20);
+        sll.insertLast(56);
+
         System.out.println(" ");
         sll.display();
     }

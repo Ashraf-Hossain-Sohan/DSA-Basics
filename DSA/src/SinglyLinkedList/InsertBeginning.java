@@ -39,6 +39,8 @@ public class InsertBeginning {
 //        third.next = forth;
 
         sll.insertFirst(11);
+        sll.insertFirst(100);
+        sll.insertFirst(300);
 
         sll.display();
     }

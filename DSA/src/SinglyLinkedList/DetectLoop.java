@@ -69,5 +69,7 @@ public class DetectLoop {
 //        sll.display(head);
         System.out.println(sll.containsLoop());
 
+
+
     }
 }
