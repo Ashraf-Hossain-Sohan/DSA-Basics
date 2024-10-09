@@ -1,6 +1,6 @@
 package DoublyLinkedList;
 
-public class Display {
+public class  Display {
 
     private ListNode head;
     private ListNode tail;
@@ -30,6 +30,17 @@ public class Display {
         return length;
     }
 
+    public void insertFirst(int value){
+        ListNode newNode = new ListNode(value);
+        if (isEmpty()){
+            tail = newNode;
+        }else{
+            head.previous = newNode;
+        }
+        newNode.next = head;
+        head = newNode;
+        length++;
+    }
     public void insertLast(int data){
         ListNode newNode = new ListNode(data);
         if(isEmpty()){
@@ -46,7 +57,6 @@ public class Display {
         if(head == null){
             return;
         }
-
         ListNode temp = head;
         while(temp != null){
             System.out.print(temp.data + " --> ");
@@ -73,6 +83,10 @@ public class Display {
         dll.insertLast(2);
         dll.insertLast(3);
         dll.insertLast(4);
+
+        dll.insertFirst(55);
+        dll.insertFirst(236);
+        dll.insertFirst(458);
 
         dll.displayBackward();
         dll.displayForward();

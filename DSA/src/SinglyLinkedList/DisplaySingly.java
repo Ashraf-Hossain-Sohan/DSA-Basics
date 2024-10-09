@@ -22,7 +22,7 @@ public class DisplaySingly {
         }
         System.out.print("Null");
     }
-    public static void main (String args[]){
+    public static void main (String[] args){
         DisplaySingly sll = new DisplaySingly();
 
         sll.head = new ListNode(10);
